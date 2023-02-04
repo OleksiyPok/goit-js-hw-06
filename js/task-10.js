@@ -4,10 +4,10 @@ const destroyButton = document.querySelector('[data-destroy]');
 const parentElement = document.querySelector('#boxes');
 
 createButton.addEventListener('click', onClickCreate);
-destroyButton.addEventListener('click', onClickDestroy); 
+destroyButton.addEventListener('click', onClickDestroy);
 
 function onClickCreate() {
-  createBoxes(amountInput.value)
+  createBoxes(amountInput.value);
 }
 
 function onClickDestroy() {
@@ -24,15 +24,15 @@ function createBoxes(amount) {
     elemWidth = Number(parentElement.lastElementChild.style.width.slice(0, -2));
   }
 
-  for (let i = 0; i < (amount); i +=1) {
+  for (let i = 0; i < amount; i += 1) {
     const newDiv = document.createElement('div');
-    const elemStyle = `height: ${elemHeight += 10}px; width: ${elemWidth += 10}px; background: ${getRandomHexColor()}`;
+    const elemStyle = `height: ${(elemHeight += 10)}px; width: ${(elemWidth += 10)}px; background: ${getRandomHexColor()}`;
     newDiv.setAttribute('style', elemStyle);
     elemCollection.push(newDiv);
   }
-  
+
   parentElement.append(...elemCollection);
-} 
+}
 
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)

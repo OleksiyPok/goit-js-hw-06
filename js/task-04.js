@@ -1,4 +1,3 @@
-
 let counterValue = 0;
 
 const buttonDecrementRef = document.querySelector('[data-action = "decrement"]');
@@ -9,13 +8,11 @@ buttonDecrementRef.addEventListener('click', onButtonDecrementClick);
 buttonIncrementRef.addEventListener('click', onButtonIncrementClick);
 
 function onButtonDecrementClick() {
-    counterValue -= 1;
-    valueIndicatorRef.textContent = counterValue;
+  counterValue -= 1;
+  valueIndicatorRef.textContent = counterValue;
 }
 
 function onButtonIncrementClick() {
-    counterValue += 1;
-    valueIndicatorRef.textContent = counterValue;
+  counterValue += 1;
+  valueIndicatorRef.textContent = counterValue;
 }
-
- 

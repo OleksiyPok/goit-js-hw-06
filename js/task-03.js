@@ -13,22 +13,22 @@ const images = [
   },
 ];
 
-const head = document.querySelector("head");
+const head = document.querySelector('head');
 const ulGalery = document.querySelector('.gallery');
 
-head.insertAdjacentHTML("beforeend",'<link rel="stylesheet" href="css/dev.css" />');
+head.insertAdjacentHTML('beforeend', '<link rel="stylesheet" href="css/dev.css" />');
 
-const makeGallery = (images) => {
-  return images.map(image => { 
+const makeGallery = images => {
+  return images.map(image => {
     const liColl = document.createElement('li');
-    const imageWidth = "100%";
-    liColl.insertAdjacentHTML("afterbegin",
-      `<img class="image" src ="${image.url}" alt = "${image.alt}" width = ${imageWidth}/>`);
-  return liColl;
+    const imageWidth = '100%';
+    liColl.insertAdjacentHTML(
+      'afterbegin',
+      `<img class="image" src ="${image.url}" alt = "${image.alt}" width = ${imageWidth}/>`
+    );
+    return liColl;
   });
-}
+};
 
 const liColl = makeGallery(images);
 ulGalery.append(...liColl);
-
-
