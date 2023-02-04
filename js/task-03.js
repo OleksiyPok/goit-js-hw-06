@@ -14,9 +14,9 @@ const images = [
 ];
 
 const head = document.querySelector("head");
-head.insertAdjacentHTML("beforeend",'<link rel="stylesheet" href="css/dev.css" />');
-
 const ulGalery = document.querySelector('.gallery');
+
+head.insertAdjacentHTML("beforeend",'<link rel="stylesheet" href="css/dev.css" />');
 
 const makeGallery = (images) => {
   return images.map(image => { 
